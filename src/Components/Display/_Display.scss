@@ -1,0 +1,30 @@
+.display {
+  padding: 1rem;
+  border-radius: 10px;
+  background: inherit;
+  text-align: right;
+  cursor: not-allowed;
+  box-shadow: var(--box-shadow-inset);
+  height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  &__output {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  &__input {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.dark {
+  .display {
+    box-shadow: var(--box-shadow-inset-dark);
+  }
+}

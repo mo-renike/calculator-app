@@ -1,0 +1,87 @@
+.wrapper {
+  padding: 4rem 1rem 1rem 1rem;
+  background-color: inherit;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 540px;
+  box-shadow: var(--box-shadow);
+  position: relative;
+
+  .dark-mode-btn {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.7rem;
+  margin: 1.5rem 0;
+
+  > * {
+    background-color: inherit;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: var(--text-color);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow-btn);
+
+    &:hover {
+      background-color: var(--accent-color);
+    }
+
+    &:nth-last-child(4n) {
+      color: var(--accent-color-dark);
+    }
+
+    &:nth-child(-n + 3) {
+      color: var(--accent-color-dark);
+    }
+  }
+
+  &__equals {
+    grid-column: 3 / 5;
+    background-color: var(--accent-color);
+    color: var(--accent-color-dark);
+  }
+}
+
+.dark {
+  background-color: var(--bg-color-dark);
+  color: var(--color-gray);
+
+  .wrapper {
+    box-shadow: var(--box-shadow-dark);
+  }
+
+  .buttons > * {
+    box-shadow: var(--box-shadow-btn-dark);
+
+    &:nth-last-child(4n) {
+      color: var(--accent-color-darkmode);
+    }
+
+    &:nth-child(-n + 3) {
+      color: var(--accent-color-darkmode);
+    }
+
+    &:hover {
+      background-color: lighten(#122028, 5);
+    }
+  }
+
+  .buttons__equals {
+    background-color: lighten(#122028, 5);
+    color: var(--accent-color-darkmode);
+
+    &:hover {
+      background-color: lighten(#122028, 10);
+    }
+  }
+}

@@ -1,0 +1,101 @@
+.display {
+  padding: 1rem;
+  border-radius: 10px;
+  background: inherit;
+  text-align: right;
+  cursor: not-allowed;
+  box-shadow: var(--box-shadow-inset);
+  height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.display__output {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.display__input {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dark .display {
+  box-shadow: var(--box-shadow-inset-dark);
+}
+
+.wrapper {
+  padding: 4rem 1rem 1rem 1rem;
+  background-color: inherit;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 540px;
+  box-shadow: var(--box-shadow);
+  position: relative;
+}
+.wrapper .dark-mode-btn {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.7rem;
+  margin: 1.5rem 0;
+}
+.buttons > * {
+  background-color: inherit;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: var(--text-color);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow-btn);
+}
+.buttons > *:hover {
+  background-color: var(--accent-color);
+}
+.buttons > *:nth-last-child(4n) {
+  color: var(--accent-color-dark);
+}
+.buttons > *:nth-child(-n+3) {
+  color: var(--accent-color-dark);
+}
+.buttons__equals {
+  grid-column: 3/5;
+  background-color: var(--accent-color);
+  color: var(--accent-color-dark);
+}
+
+.dark {
+  background-color: var(--bg-color-dark);
+  color: var(--color-gray);
+}
+.dark .wrapper {
+  box-shadow: var(--box-shadow-dark);
+}
+.dark .buttons > * {
+  box-shadow: var(--box-shadow-btn-dark);
+}
+.dark .buttons > *:nth-last-child(4n) {
+  color: var(--accent-color-darkmode);
+}
+.dark .buttons > *:nth-child(-n+3) {
+  color: var(--accent-color-darkmode);
+}
+.dark .buttons > *:hover {
+  background-color: #1a2e3a;
+}
+.dark .buttons__equals {
+  background-color: #1a2e3a;
+  color: var(--accent-color-darkmode);
+}
+.dark .buttons__equals:hover {
+  background-color: #223c4b;
+}/*# sourceMappingURL=Main.css.map */

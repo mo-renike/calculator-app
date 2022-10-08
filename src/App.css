@@ -1,38 +1,33 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  border: none;
+}
+:root {
+  --bg-color: #efefef;
+  --bg-color-dark: #122028;
+  --accent-color-darkmode: #00ffea;
+  --text-color: #8f8f8f;
+  --color-gray: #d9d9d9;
+  --accent-color: #e9f1c9;
+  --accent-color-dark: #4d0915;
+  --box-shadow: 5px 5px 10px #bcbcbc, -5px -5px 10px #e4e4e4;
+  --box-shadow-btn: 3px 3px 3px #bcbcbc, -3px -3px 3px #e6e6e6;
+  --box-shadow-btn-dark: 3px 3px 3px #0c1111, -3px -3px 3px #0c1111;
+  --box-shadow-inset: inset 3px 3px 5px #cccccc, inset -3px -3px 5px #e1e1e1;
+  --box-shadow-inset-dark: inset 3px 3px 5px #0c1111,
+    inset -3px -3px 5px #0c1111;
+  --box-shadow-dark: 5px 5px 10px #0c1011, -5px -5px 10px #0c1011;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Roboto", sans-serif;
   align-items: center;
+  display: flex;
+  width: 100vw;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  height: 100vh;
+  transition: all 0.4s ease;
 }
