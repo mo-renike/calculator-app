@@ -27,7 +27,9 @@ body {
   align-items: center;
   display: flex;
   width: 100vw;
+  padding: 0;
   justify-content: center;
   height: 100vh;
   transition: all 0.4s ease;
+  overflow: hidden;
 }
