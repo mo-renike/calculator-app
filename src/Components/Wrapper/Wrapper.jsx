@@ -121,13 +121,58 @@ const Wrapper = () => {
             output: "Limit reached🙄",
           });
         }
-        //check if operator is clicked twice
-        if (calc.operator === value) {
+        // check if input contains two or more operators
+        if (calc.input.includes("++") || calc.input.includes("--") || calc.input.includes("**") || calc.input.includes("//")) {
           setCalc({
             ...calc,
-            input: calc.input.slice(0, -1),
+            input: "0",
+            output: "Invalid input😒",
           });
         }
+        // check if input contains different operators
+        if (calc.input.includes("/") && calc.input.includes("*")) {
+          setCalc({
+            ...calc,
+            input: "0",
+            output: "Invalid input😒",
+          });
+        }
+        if (calc.input.includes("/") && calc.input.includes("-")) {
+          setCalc({
+            ...calc,
+            input: "0",
+            output: "Invalid input😒",
+          });
+        }
+        if (calc.input.includes("/") && calc.input.includes("+")) {
+          setCalc({
+            ...calc,
+            input: "0",
+            output: "Invalid input😒",
+          });
+        }
+        if (calc.input.includes("*") && calc.input.includes("-")) {
+          setCalc({
+            ...calc,
+            input: "0",
+            output: "Invalid input😒",
+          });
+        }
+        if (calc.input.includes("*") && calc.input.includes("+")) {
+          setCalc({
+            ...calc,
+            input: "0",
+            output: "Invalid input😒",
+          });
+        }
+        if (calc.input.includes("-") && calc.input.includes("+")) {
+          setCalc({
+            ...calc,
+            input: "0",
+            output: "Invalid input😒",
+          });
+        }
+
     }
   };
   return (
