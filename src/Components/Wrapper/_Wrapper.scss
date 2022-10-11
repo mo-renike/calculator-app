@@ -20,13 +20,13 @@
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 0.7rem;
+  grid-gap: 0.8rem;
   margin: 1.5rem 0;
 
   > * {
     background-color: inherit;
-    padding: 0.5rem;
-    font-size: 1.1rem;
+    padding: 0.6rem;
+    font-size: 1.2rem;
     cursor: pointer;
     color: var(--text-color);
     border-radius: 10px;

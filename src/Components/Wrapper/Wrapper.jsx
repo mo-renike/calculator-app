@@ -29,7 +29,7 @@ const Wrapper = () => {
   //set intial calulator state
   const [calc, setCalc] = React.useState({
     input: "0",
-    output: "",
+    output: "0",
     operator: "",
   });
 
@@ -40,10 +40,11 @@ const Wrapper = () => {
     setDarkMode(!darkMode);
   };
 
-  //handle calculator logic
+  //handle calculator  logic
   const handleClick = (e) => {
+    const value = e.target.value;
     //switch statement to handle button clicks
-    switch (e.target.value) {
+    switch (value) {
       case "C":
         setCalc({
           input: "0",
@@ -100,15 +101,31 @@ const Wrapper = () => {
         });
         break;
       default:
+
         if (calc.input === "0") {
           setCalc({
             ...calc,
-            input: e.target.value,
+            input: value,
           });
         } else {
           setCalc({
             ...calc,
-            input: calc.input + e.target.value,
+            input: calc.input + value,
+          });
+        }
+        // check number of inputs
+        if (calc.input.length > 14) {
+          setCalc({
+            ...calc,
+            input: "0",
+            output: "Limit reached🙄",
+          });
+        }
+        //check if operator is clicked twice
+        if (calc.operator === value) {
+          setCalc({
+            ...calc,
+            input: calc.input.slice(0, -1),
           });
         }
     }
